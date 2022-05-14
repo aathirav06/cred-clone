@@ -1,10 +1,10 @@
 import React from 'react'
-import HeroSection from './components/HeroSection/HeroSection'
+import Homepage from './pages/Homepage'
 
 
 const App = () => {
   return (
-    <HeroSection/>
+    <Homepage/>
   )
 }
 

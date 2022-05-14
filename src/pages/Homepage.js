@@ -1,13 +1,13 @@
 import React from 'react'
-import Header from "../components/common/header/Header"
+import Header from "../components/common/Header/Header"
 import HeroSection from '../components/HeroSection/HeroSection'
 
 const Homepage = () => {
   return (
     <>
 
-<Header/>
-<HeroSection/>
+<Header />
+<HeroSection />
     </>
   )
 }
