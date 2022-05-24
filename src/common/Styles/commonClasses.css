@@ -21,12 +21,12 @@
     min-height: 100vh;
     min-width: 100vw;
     background-size: cover;
-    display: flex;
-    flex-direction: column;
+    background-repeat: no-repeat;
+    
   }
   
   .photo-section-child {
-    padding: 300px 0px 180px;
+    padding: 240px 0px 180px;
     justify-content: space-between;
   }
   
@@ -63,7 +63,7 @@
 
 @media all and (max-width:767px){
     .max-width{
-        max-width: 90%;
+        max-width: 100%;
     }
     .non-mobile{
         display: none !important;
