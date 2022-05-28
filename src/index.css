@@ -3,7 +3,7 @@
 @import url(./common/Styles/commonClasses.css);
 @import url(./common/Styles/animation.css);
 
-body {
+html,body {
   margin: 0;
   font-family: Gilroy,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -12,6 +12,10 @@ body {
   background-color: var(--bg-black);
   color: var(--text);
   background-repeat: no-repeat;
+  background-position: center; 
+  -webkit-background-size: cover;
+  background-size: cover;
+  overflow-x: hidden;
   
 }
 

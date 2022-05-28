@@ -2,6 +2,9 @@
     max-width: 70%;
     margin: auto;
 }
+.width-50 {
+  width: 50%;
+}
 
 .flex{
     display: flex;
@@ -59,11 +62,17 @@
     .max-width{
         max-width: 80%;
     }
+    .photo-section-heading {
+      max-width: 670px;
+    }
+    .photo-section-child {
+      padding: 100px 0px;
+    }
 }
 
 @media all and (max-width:767px){
     .max-width{
-        max-width: 100%;
+        max-width: 90%;
     }
     .non-mobile{
         display: none !important;
