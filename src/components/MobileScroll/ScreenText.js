@@ -1,8 +1,7 @@
-import { isVisible } from '@testing-library/user-event/dist/utils';
+
 import React from 'react'
 import {useRef, useState ,useEffect} from 'react'
-import './MobileScroll.css'
- 
+
 const ScreenText = ({screen,setCurrentImg,i}) => {
 
   const[showAnimation, setShowAnimation]=useState(false);
@@ -10,7 +9,8 @@ const ref = useRef(null);
 
 const toggleAnimation = (e) => {
   if (e[0]?.isIntersecting) {
-    setShowAnimation(true);
+    setShowAnimation(!showAnimation);
+    setCurrentImg(i);
   }
 };
 
@@ -22,21 +22,21 @@ const options = {
 
 useEffect(() => {
   const observer = new IntersectionObserver(toggleAnimation, options);
-  if (!showAnimation) {
+  
     if (ref.current) {
       observer.observe(ref.current);
     }
-  }
+  
   return () => {
     if (ref.current) {
       observer.unobserve(ref.current);
     }
   };
-});
+},[]);
 
 
   return (
-    <div className={`screen-text ${isVisible ? "text-visible" : ""}`} ref={ref}>
+    <div className={`screen-text ${showAnimation ? "text-visible" : ""}`} ref={ref}>
        <div className="screen-heading">
            {screen.heading}
        </div>
@@ -45,7 +45,8 @@ useEffect(() => {
           <div className="mobile-mockup-screen flex absolute-center">
             <img
               src={screen.mobile_img}
-              className='mobile-screen-img' />
+              className='mobile-screen-img slide-in-right' 
+              key={screen.mobile_img}/>
           </div>
         </div>
 
@@ -53,7 +54,7 @@ useEffect(() => {
       <div className='screen-description'>{screen.description}</div>
 
     </div>
-  )
-}
+  );
+};
 
 export default ScreenText

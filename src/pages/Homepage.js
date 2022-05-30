@@ -1,6 +1,8 @@
 import React from 'react'
+import AppRating from '../components/AppRating/AppRating'
 import BrandsLove from '../components/BrandsLove/BrandsLove'
 import Header from "../components/common/Header/Header"
+import CredStory from '../components/CredStory/CredStory'
 import Experience from '../components/Experience/Experience'
 import FeelSpecial from '../components/FeelSpecial/FeelSpecial'
 import HeroSection from '../components/HeroSection/HeroSection'
@@ -25,6 +27,8 @@ const Homepage = () => {
 </div>
 
 <Security/>
+<CredStory/>
+<AppRating/>
     </>
   )
 }
