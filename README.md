@@ -1,7 +1,7 @@
 # CRED CLONE
-## _The Last Markdown Editor, Ever_
 
 A simple CRED clone made using react.js ⚡.
+
 Currently, I have implemented the basic UI of famous Indian Startup Brand 
 using REACT HOOKS.
 
